@@ -5,7 +5,6 @@ import Linker from './components/Linker/Linker';
 import Footer from './components/Footer/Footer';
 import Switch from './components/Switch/Switch';
 import MainStyled from './components/MainStyled/MainStyled';
-import TestType from './TestType';
 
 function App() {
   const [checked, setChecked] = useState<boolean>(false)
