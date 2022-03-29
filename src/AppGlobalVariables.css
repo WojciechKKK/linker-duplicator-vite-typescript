@@ -1,0 +1,25 @@
+/* GLOBAL VARIABLES */
+
+:root {
+  /* COLORS */
+  --color-background-linker: #92A8D1;
+  --color-background-duplikator: #66A182;
+
+  /* TEXTAREA */
+  --text-area-box-shadow: red;
+  --text-area-width: 90%;
+  --text-area-background: white;
+  --text-area-border-radius-size: 0px;
+
+  /* HEADER */
+  --header-text-color: white;
+  --header-font-size: 15px;
+
+  /* FOOTER */
+  --footer-size: 10px;
+  --footer-text-color: white;
+
+  /* CSS EFFECTS */
+  --switch-transition-time: .4s;
+
+}

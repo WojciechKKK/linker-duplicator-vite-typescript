@@ -1,27 +1,27 @@
 import { useState } from 'react'
-import './App.css'
+import './AppGlobalVariables.css'
 import Duplicator from './components/Duplicator/Duplicator';
 import Linker from './components/Linker/Linker';
 import Footer from './components/Footer/Footer';
 import Switch from './components/Switch/Switch';
 import MainStyled from './components/MainStyled/MainStyled';
+import AppStyled from './AppStyled';
 
 function App() {
   const [checked, setChecked] = useState<boolean>(false)
+  const setCheckedValue = () => setChecked(prevState => !prevState);
 
-  const setCheckedValue = () => setChecked(prevState => !prevState)
   return (
-    <div className="App">
+    <AppStyled isDuplikator={checked}>
       <Switch switchValue={checked} fnSetSwitch={setCheckedValue} />
       <MainStyled>
         { checked
-          ? <Linker  />
+          ? <Linker />
           : <Duplicator />
         }
       </MainStyled>
       <Footer />
-      {/* <TestType /> */}
-    </div>
+    </AppStyled>
   )
 }
 

@@ -5,10 +5,18 @@ const DuplicatorStyled = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
   @media screen and (min-width: 768px){
-    flex-direction: row;
+    flex-direction: row;  
+    gap:10px
     }
   }
 `
+const SectionStyled = styled.div`
+  text-align: center;
+  flex: 1;
+`
 
-export default DuplicatorStyled;
+export { DuplicatorStyled, SectionStyled }

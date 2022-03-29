@@ -13,8 +13,8 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: var(--transition-time);
-  transition: var(--transition-time);;
+  -webkit-transition: var(--switch-transition-time);
+  transition: var(--switch-transition-time);
 }
 
 .slider:before {
@@ -25,8 +25,8 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: var(--transition-time);;
-  transition: var(--transition-time);;
+  -webkit-transition: var(--switch-transition-time);
+  transition: var(--switch-transition-time);
 }
 
 input:checked + .slider {

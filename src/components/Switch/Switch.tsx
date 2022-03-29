@@ -1,8 +1,8 @@
-import SwitchStyled from './SwitchStyled';
-import SwitchText from '../common/SwitchText/SwitchText';
-import SwitchLabelStyled from './SwitchLabelStyled';
-import './Switch.css';
+import SwitchText from './SwitchText/SwitchText';
+import { SwitchLabelStyled, SwitchStyled} from './SwitchStyled';
 import { FunctionComponent } from 'react';
+import SwitchInput from './SwitchInput/SwitchInput';
+import SwitchSpan from './SwitchSpan/SwitchSpan';
 
 type SwitchProps = {
   switchValue: boolean,
@@ -12,12 +12,11 @@ type SwitchProps = {
 const Switch:FunctionComponent<SwitchProps> = ({switchValue, fnSetSwitch}) => {
   return (
     <SwitchStyled>
-      <SwitchText fnOnClick={fnSetSwitch} visible={switchValue} text="Duplicator" />
+      <SwitchText visible={switchValue} />
       <SwitchLabelStyled>
-        <input type="checkbox" checked={switchValue} onChange={() => fnSetSwitch(!switchValue)} />
-        <span className="slider round"></span>
+        <SwitchInput checkedValue={switchValue} fnOnChange={fnSetSwitch} />
+        <SwitchSpan />
       </SwitchLabelStyled>
-      <SwitchText fnOnClick={fnSetSwitch} visible={!switchValue} text="Linker" />
     </SwitchStyled>
   )
 };

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const FooterStyled = styled.footer`
-  font-size: 10px;
+  font-size: var(--footer-size);
+  color: var(--footer-text-color);
   display: flex;
   justify-content: center;
   align-items: center;

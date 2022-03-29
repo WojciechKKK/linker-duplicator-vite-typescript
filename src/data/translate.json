@@ -1,0 +1,15 @@
+{
+  "linker": "Linker",
+  "duplikator": "Duplikator",
+  "inputPlaceholder": "Tutaj WKLEJ tekst - użyj przecinka jako separator",
+  "inputPlaceholdertWithoutDuplicates": "Tutaj pojawi się tekst bez duplikatów",
+  "footerText": "© 2022 Linker Duplikator. All rights reserved",
+  "button": {
+    "start": "start",
+    "copy": "kopiuj",
+    "reset": "reset"
+  },
+  "errors": {
+    "completeText": "Uzupełnij tekst"
+  }
+}

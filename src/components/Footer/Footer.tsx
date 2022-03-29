@@ -1,9 +1,10 @@
 import FooterStyled from './FooterStyled';
+import * as translate from '../../data/translate.json';
 
 const Footer = () => {
   return (
     <FooterStyled>
-      © 2022 Linker Duplicator. All rights reserved
+      {translate.footerText}
     </FooterStyled>
   )
 };
