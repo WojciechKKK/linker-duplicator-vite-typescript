@@ -3,7 +3,9 @@
 :root {
   /* COLORS */
   --color-background-linker: #92A8D1;
+  --color-background-linker: #66A182;
   --color-background-duplikator: #66A182;
+  --color-background-duplikator: rgb(27, 38, 44);
 
   /* TEXTAREA */
   --text-area-box-shadow: red;
