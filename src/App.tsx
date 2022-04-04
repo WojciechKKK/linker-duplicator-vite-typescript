@@ -7,8 +7,9 @@ import Switch from './components/Switch/Switch';
 import MainStyled from './components/MainStyled/MainStyled';
 import AppStyled from './AppStyled';
 
+
 function App() {
-  const [checked, setChecked] = useState<boolean>(false)
+  const [checked, setChecked] = useState<boolean>(true)
   const setCheckedValue = () => setChecked(prevState => !prevState);
 
   return (

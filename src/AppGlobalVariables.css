@@ -22,4 +22,10 @@
   /* CSS EFFECTS */
   --switch-transition-time: .4s;
 
+  /* ------------ DUPLIKATOR ------------ */
+  /* POPUP */
+  --popup-color-background: white;
+  --popup-width: 50vw;
+  --popup-text-color: black;
+
 }

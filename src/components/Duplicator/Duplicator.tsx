@@ -1,24 +1,20 @@
 import { DuplicatorStyled, SectionStyled}  from './DuplicatorStyled';
 import SectionButtons from '../common/SectionButtons/SectionButtons';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as translate from '../../data/translate.json';
 import TextAreaField from '../common/TextAreaField/TextAreaField';
 import { useRemoveDuplicate } from '../../utils/useRemoveDuplicate';
+import Details from '../common/Details/Details';
 
 const Duplicator = () => {
   const { inputPlaceholder, inputPlaceholdertWithoutDuplicates } = translate;
   const [ valueFromUser, setValueFromUser] = useState('');
-  const [ valueToUser, setValueToUser] = useState([""]);
-  const { fnRemoveDuplicate, resultValues} = useRemoveDuplicate(valueFromUser)
+  const { fnRemoveDuplicate, resultValues, duplicates, reset } = useRemoveDuplicate(valueFromUser)
 
   const resetData = () => {
     setValueFromUser("")
-    setValueToUser([""])
+    reset()
   }
-
-  useEffect(() => {
-    setValueToUser(resultValues)
-  }, [resultValues])
 
   return (
     <DuplicatorStyled>
@@ -32,17 +28,22 @@ const Duplicator = () => {
      
       <SectionButtons
         fnResetData={resetData} 
-        fnRemoveDuplicate={fnRemoveDuplicate}
-        valuesForCopy={valueToUser}
+        fnRemoveData={fnRemoveDuplicate}
+        valuesForCopy={resultValues}
       />
 
       <SectionStyled>
         <TextAreaField 
           placeholder={inputPlaceholdertWithoutDuplicates}
           readOnly
-          value={valueToUser}
+          value={resultValues}
         />
       </SectionStyled>
+
+      <Details
+        duplicateElements={duplicates} 
+      />
+      
     </DuplicatorStyled>
   )
 };

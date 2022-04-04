@@ -3,13 +3,20 @@
   "duplikator": "Duplikator",
   "inputPlaceholder": "Tutaj WKLEJ tekst - użyj przecinka jako separator",
   "inputPlaceholdertWithoutDuplicates": "Tutaj pojawi się tekst bez duplikatów",
+  "linkerInputPlaceholder": "Link",
+  "linkerOutputPlaceholder": "Rezultat",
   "footerText": "© 2022 Linker Duplikator. All rights reserved",
   "button": {
     "start": "start",
     "copy": "kopiuj",
-    "reset": "reset"
+    "reset": "reset",
+    "close": "close",
+    "info": "zobacz duplikaty"
   },
   "errors": {
-    "completeText": "Uzupełnij tekst"
-  }
+    "completeText": "Uzupełnij tekst",
+    "wrongLink": "Błędny link!"
+  },
+  "noDuplicates": "Brak duplikatów",
+  "duplicatesHeader": "Lista duplikatów"
 }

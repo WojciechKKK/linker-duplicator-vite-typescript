@@ -4,11 +4,19 @@ import { useState } from 'react';
 interface RemoveDuplicate {
   fnRemoveDuplicate: () => void;
   resultValues: string[];
+  duplicates: string[];
+  reset: () => void
 }
 
 export const useRemoveDuplicate = (valueFromUser: string): RemoveDuplicate => {
   const { errors: { completeText } } = translate;
   const [ resultValues, setResultValues ] = useState([""])
+  const [ duplicates, setDuplicates ] = useState([""])
+
+  const reset = () => {
+    setResultValues([""]);
+    setDuplicates([""])
+  };
 
   const fnRemoveDuplicate = (): void => {
     if(!valueFromUser){ 
@@ -28,7 +36,8 @@ export const useRemoveDuplicate = (valueFromUser: string): RemoveDuplicate => {
     });
 
     setResultValues(resultPhrasesArr);
+    setDuplicates(duplicateItemsArr);
   }
 
-  return { fnRemoveDuplicate, resultValues }
+  return { fnRemoveDuplicate, resultValues, duplicates, reset }
 }

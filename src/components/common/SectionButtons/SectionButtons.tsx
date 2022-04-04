@@ -8,15 +8,16 @@ import {ButtonBoxStyled, ButtonBackgroundStyled } from '../Button/ButtonStyled';
 type SectionButtonssProps = {
   valuesForCopy: string[],
   fnResetData: () => void,
-  fnRemoveDuplicate: () => void
+  fnRemoveData: () => void,
+  horizontalView?: boolean
 }
 
-const SectionButtons: FunctionComponent<SectionButtonssProps> = ({ fnResetData, fnRemoveDuplicate, valuesForCopy }) => {
+const SectionButtons: FunctionComponent<SectionButtonssProps> = ({ fnResetData, fnRemoveData, valuesForCopy, horizontalView }) => {
   const { start, copy, reset } = translate.button;
 
   return (
-    <SectionButtonsStyled>
-      <Button fnClick={fnRemoveDuplicate} text={start}/>
+    <SectionButtonsStyled horizontalView={horizontalView}>
+      <Button fnClick={fnRemoveData} text={start}/>
       
       <CopyToClipboard text={`${valuesForCopy}`}>
         <ButtonBoxStyled>

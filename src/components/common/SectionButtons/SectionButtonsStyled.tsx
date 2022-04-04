@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-const SectionButtonsStyled = styled.div`
+type SectionButtonsStyledProps = {
+  horizontalView?: boolean
+}
+
+const SectionButtonsStyled = styled.div<SectionButtonsStyledProps>`
   padding: 10px 0;
   display: flex;
   flex-direction: row;
@@ -8,8 +12,11 @@ const SectionButtonsStyled = styled.div`
   justify-content: space-around;
   align-items: center;
   
-  @media(min-width: 768px){
+  @media screen and (min-width: 768px){
     flex-direction: column;
+    ${({horizontalView}) => horizontalView && `
+      flex-direction: row;
+    `}
   }
 }
 `

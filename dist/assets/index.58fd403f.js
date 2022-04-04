@@ -22,7 +22,7 @@ import{s as i,j as k,l as z,r as u,R as P,a as F}from"./vendor.65235703.js";cons
   justify-content: space-around;
   align-items: center;
   
-  @media(min-width: 768px){
+  @media screen and (min-width: 768px){
     flex-direction: column;
   }
 }
