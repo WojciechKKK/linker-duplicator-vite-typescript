@@ -2,4 +2,4 @@
 
 In progress ...
 
-https://linker-duplicator-vite-typescript.netlify.app/
+https://pinka.netlify.app/
