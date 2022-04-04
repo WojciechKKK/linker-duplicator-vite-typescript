@@ -1,4 +1,4 @@
-# linker-duplicator-vite-typescript
+# linker-duplikator-vite-typescript
 
 In progress ...
 
