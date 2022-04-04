@@ -9,7 +9,10 @@
   --text-area-box-shadow: red;
   --text-area-width: 90%;
   --text-area-background: white;
-  --text-area-border-radius-size: 0px;
+  --text-area-border-radius-size: 20px;
+
+  /* BUTTON */
+  --button-border-radius-size: 20px;
 
   /* HEADER */
   --header-text-color: white;

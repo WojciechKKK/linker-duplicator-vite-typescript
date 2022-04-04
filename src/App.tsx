@@ -9,7 +9,7 @@ import AppStyled from './AppStyled';
 
 
 function App() {
-  const [checked, setChecked] = useState<boolean>(true)
+  const [checked, setChecked] = useState<boolean>(false)
   const setCheckedValue = () => setChecked(prevState => !prevState);
 
   return (

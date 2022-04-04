@@ -25,6 +25,7 @@ const ButtonBackgroundStyled = styled.div<ButtonBackgroundStyledProps>`
   `}  
   transition: all 0.5s;
   position: relative;
+  border-radius: var(--button-border-radius-size);
   &::before {
     content: '';
     position: absolute;
@@ -41,10 +42,12 @@ const ButtonBackgroundStyled = styled.div<ButtonBackgroundStyledProps>`
     ${({ errorBtn }) => errorBtn && `
       background-color: rgba(255,0,0,0.1);
     `}
+    border-radius: var(--button-border-radius-size);
   }
   &:hover::before {
     opacity: 0 ;
     transform: scale(0.5,0.5);
+    border-radius: var(--button-border-radius-size);
   }
   &::after {
     content: '';
@@ -68,6 +71,8 @@ const ButtonBackgroundStyled = styled.div<ButtonBackgroundStyledProps>`
   &:hover::after {
     opacity: 1;
 	  transform: scale(1,1);
+    border-radius: var(--button-border-radius-size);
   }
+  border-radius: var(--button-border-radius-size);
 `
 export {ButtonBoxStyled, ButtonBackgroundStyled}
