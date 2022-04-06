@@ -8,7 +8,7 @@ const DetailsStyled = styled.div`
   @media screen and (min-width: 768px){
     bottom: 9vh;
     right: 3vw;
-    }
+  }
 `
 
 export default DetailsStyled;

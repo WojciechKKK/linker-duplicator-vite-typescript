@@ -1,9 +1,10 @@
 import { LinkerStyled, SectionStyled } from './LinkerStyled';
-import TextAreaField from '../common/TextAreaField/TextAreaField';
+import { ThemeType, TextAreaField } from '../common/TextAreaField/TextAreaField';
 import * as translation from '../../data/translate.json';
 import { useState } from 'react';
 import SectionButtons from '../common/SectionButtons/SectionButtons';
 import { useRemoveLink } from './../../utils/useRemoveLink';
+import Alert from '../common/Alert/Alert';
 
 const Linker = () => {
   const { linkerInputPlaceholder, linkerOutputPlaceholder} = translation;
@@ -19,6 +20,7 @@ const Linker = () => {
     <LinkerStyled>
       <SectionStyled>
         <TextAreaField 
+          theme={ThemeType.DARK}
           placeholder={linkerInputPlaceholder}
           value={valueFromUser}
           onChange={e => setValueFromUser(e.target.value)}
@@ -30,15 +32,18 @@ const Linker = () => {
         fnResetData={resetData} 
         fnRemoveData={fnRemoveLink}
         valuesForCopy={resultValues}
+        valueFromUser={valueFromUser}
       />
 
       <SectionStyled>
         <TextAreaField 
+          theme={ThemeType.DARK}
           placeholder={linkerOutputPlaceholder}
           readOnly
           value={resultValues}
         />
       </SectionStyled>
+
     </LinkerStyled>
   )
 };

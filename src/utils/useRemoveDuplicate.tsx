@@ -20,9 +20,9 @@ export const useRemoveDuplicate = (valueFromUser: string): RemoveDuplicate => {
 
   const fnRemoveDuplicate = (): void => {
     if(!valueFromUser){ 
-      return alert(completeText)
+      return;
     }
-
+    
     const resultPhrasesArr: string[] = [];
     const duplicateItemsArr: string[] = []
     const phrasesWithoutWhiteSpace: string[] = valueFromUser

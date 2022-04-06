@@ -10,7 +10,7 @@ type PopupDetailsProps = {
 }
 
 const PopupDetails: FunctionComponent<PopupDetailsProps> = ({ fnClose, values }) => {
-  const { close } = translations.button;
+  const { close } = translations.buttons;
   const isEmptyList = values[0] === ''|| !values.length;
 
   return (

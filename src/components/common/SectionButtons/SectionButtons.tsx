@@ -2,32 +2,38 @@ import SectionButtonsStyled from './SectionButtonsStyled';
 import { FunctionComponent } from 'react';
 import * as translate from '../../../data/translate.json';
 import Button from '../Button/Button';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import {ButtonBoxStyled, ButtonBackgroundStyled } from '../Button/ButtonStyled';
+import ButtonCopy from '../ButtonCopy/ButtonCopy';
 
 type SectionButtonssProps = {
   valuesForCopy: string[],
   fnResetData: () => void,
   fnRemoveData: () => void,
-  horizontalView?: boolean
+  horizontalView?: boolean,
+  valueFromUser?: string
 }
 
-const SectionButtons: FunctionComponent<SectionButtonssProps> = ({ fnResetData, fnRemoveData, valuesForCopy, horizontalView }) => {
-  const { start, copy, reset } = translate.button;
+const SectionButtons: FunctionComponent<SectionButtonssProps> = ({ fnResetData, fnRemoveData, valuesForCopy, horizontalView, valueFromUser }) => {
+  const { start, copy, reset } = translate.buttons;
 
   return (
     <SectionButtonsStyled horizontalView={horizontalView}>
-      <Button fnClick={fnRemoveData} text={start}/>
+      <Button 
+        text={start} 
+        fnClick={fnRemoveData} 
+        showAlert={valueFromUser?.length ? false : true} 
+      />
       
-      <CopyToClipboard text={`${valuesForCopy}`}>
-        <ButtonBoxStyled>
-          <ButtonBackgroundStyled>
-            <span>{copy.toUpperCase()}</span>
-          </ButtonBackgroundStyled>
-        </ButtonBoxStyled>
-      </CopyToClipboard>
-        
-      <Button fnClick={fnResetData} text={reset}/>
+      <ButtonCopy 
+        copyValue={valuesForCopy}
+        text={copy}
+      />
+
+      <Button 
+        text={reset}
+        fnClick={fnResetData} 
+        showAlert={true} 
+      />
+
     </SectionButtonsStyled>
   )
 };

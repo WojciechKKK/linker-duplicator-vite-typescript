@@ -1,28 +1,41 @@
 /* GLOBAL VARIABLES */
 
 :root {
-  /* COLORS */
+  /* COLORS */  
+  --dark-color: #142747;
+  --light-color: #e2e2e2;
+/* 
   --color-background-linker: #92A8D1;
-  --color-background-linker: #66A182;
-  --color-background-duplikator: #66A182;
-  --color-background-duplikator: rgb(27, 38, 44);
+  --color-background-linker: #66A182; */
+  /* --color-background-duplikator: #66A182;
+  --color-background-duplikator: #72728C;
+  --color-background-duplikator: rgb(27, 38, 44); */
+  --color-background-linker: var(--dark-color);
+  --color-background-duplikator: var(--dark-color);
 
   /* TEXTAREA */
   --text-area-box-shadow: red;
   --text-area-width: 90%;
-  --text-area-background: white;
-  --text-area-border-radius-size: 20px;
+  --text-area-background-light: var(--light-color);
+  --text-area-background-dark: var(--light-color);
+  --text-area-color-light: var(--dark-color);
+  --text-area-color-dark: var(--dark-color);
+  --text-area-border-radius-size: 10px;
+  --text-area-padding: 10px 10px 0 10px;
 
-  /* BUTTON */
-  --button-border-radius-size: 20px;
+  /* BUTTONS */
+  --button-border-radius-size: 10px;
 
   /* HEADER */
-  --header-text-color: white;
+  --header-text-color: var(--light-color);
   --header-font-size: 15px;
 
   /* FOOTER */
   --footer-size: 10px;
-  --footer-text-color: white;
+  --footer-text-color: var(--light-color);
+
+  /* ALERT */
+  
 
   /* CSS EFFECTS */
   --switch-transition-time: .4s;
@@ -30,7 +43,8 @@
   /* ------------ DUPLIKATOR ------------ */
   /* POPUP */
   --popup-color-background: white;
-  --popup-width: 50vw;
+  --popup-width-small: 30vw;
+  --popup-width-big: 50vw;
   --popup-text-color: black;
 
 }

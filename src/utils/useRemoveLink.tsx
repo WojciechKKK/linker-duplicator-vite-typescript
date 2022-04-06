@@ -1,5 +1,6 @@
 import * as translations from '../data/translate.json';
 import { useState } from 'react';
+import { useAlert } from '../utils/useAlert';
 
 interface RemoveLink {
   resultValues: string[];
@@ -9,7 +10,8 @@ interface RemoveLink {
 
 export const useRemoveLink = (valueFromUser: string): RemoveLink => {
   const { errors: { completeText, wrongLink } } = translations;
-  const [ resultValues, setResultValues ] = useState([""])
+  const [ resultValues, setResultValues ] = useState([""]);
+
 
   const reset = () => {
     setResultValues([""])
@@ -17,7 +19,7 @@ export const useRemoveLink = (valueFromUser: string): RemoveLink => {
 
   const fnRemoveLink = () => {
     if(!valueFromUser){
-      return alert(completeText)
+      return;
     }
   
     if(valueFromUser.indexOf(',p') < 0) {
@@ -35,5 +37,5 @@ export const useRemoveLink = (valueFromUser: string): RemoveLink => {
     setResultValues(result);
   }
 
-  return { resultValues, fnRemoveLink, reset}
+  return { resultValues, fnRemoveLink, reset }
 }

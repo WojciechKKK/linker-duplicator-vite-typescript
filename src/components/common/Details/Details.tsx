@@ -17,7 +17,7 @@ const Details: FunctionComponent<DetailsProps> = ({ duplicateElements }) => {
   return (
     <DetailsStyled>
       <Button 
-        text={translations.button.info} 
+        text={translations.buttons.duplicate} 
         infoBtn={true}
         fnClick={() => setVisiblePopup(true)} 
       />

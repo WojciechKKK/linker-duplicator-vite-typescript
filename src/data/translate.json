@@ -6,16 +6,21 @@
   "linkerInputPlaceholder": "Link",
   "linkerOutputPlaceholder": "Rezultat",
   "footerText": "© 2022 Linker Duplikator. All rights reserved",
-  "button": {
+  "buttons": {
     "start": "start",
     "copy": "kopiuj",
     "reset": "reset",
-    "close": "close",
-    "info": "zobacz duplikaty"
+    "close": "zamknij",
+    "duplicate": "pokaż duplikaty"
   },
   "errors": {
     "completeText": "Uzupełnij tekst",
     "wrongLink": "Błędny link!"
+  },
+  "alerts": {
+    "startAlert": "Uzupełnij tekst!",
+    "copyAlert": "Skopiowano do schowka",
+    "resetAlert": "Reset danych"
   },
   "noDuplicates": "Brak duplikatów",
   "duplicatesHeader": "Lista duplikatów"

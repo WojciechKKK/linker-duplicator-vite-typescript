@@ -24,7 +24,7 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var( --dark-color);
   -webkit-transition: var(--switch-transition-time);
   transition: var(--switch-transition-time);
 }
