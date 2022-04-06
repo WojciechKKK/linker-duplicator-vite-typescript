@@ -1,5 +1,5 @@
-# linker-duplicator-vite-typescript
+# linker-duplikator-vite-typescript
 
 In progress ...
 
-https://linker-duplicator-vite-typescript.netlify.app/
+https://pinka.netlify.app/
