@@ -24,6 +24,8 @@ const Linker = () => {
           placeholder={linkerInputPlaceholder}
           value={valueFromUser}
           onChange={e => setValueFromUser(e.target.value)}
+          onBlur={()=> setValueFromUser(prevState => prevState+"\n")}
+
         />
       </SectionStyled>
 

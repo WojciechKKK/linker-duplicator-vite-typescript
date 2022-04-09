@@ -10,6 +10,7 @@ interface TextAreaFieldProps {
 }
 
 const TextAreaField = styled.textarea<TextAreaFieldProps>`
+  font-size: var(--text-area-font-size);
   color: ${({theme}) => `var(--text-area-color-${theme})`};
   height: 100%;
   border: none;
