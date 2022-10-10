@@ -9,7 +9,7 @@ type SwitchInputProps = {
 const SwitchInput:FunctionComponent<SwitchInputProps> = ({checkedValue, fnOnChange}) => {
   return (
     <>
-      <label htmlFor="switch">switch</label>
+      <label htmlFor="switch"></label>
         <input 
           id="switch"
           type="checkbox" 
