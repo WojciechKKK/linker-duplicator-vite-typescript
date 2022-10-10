@@ -8,10 +8,11 @@ type ButtonProps = {
   fnClick?: () => void,
   infoBtn?: boolean,
   errorBtn?: boolean,
-  showAlert?: boolean
+  showAlert?: boolean,
+  successBtn?: boolean
 }
 
-const Button: FunctionComponent<ButtonProps> = ({ text, fnClick, infoBtn, errorBtn, showAlert }) => {
+const Button: FunctionComponent<ButtonProps> = ({ text, fnClick, infoBtn, errorBtn, successBtn, showAlert }) => {
   const { visibleAlert, openAlert } = useAlert();
   
   const fnBtnClick = () => {
@@ -30,11 +31,19 @@ const Button: FunctionComponent<ButtonProps> = ({ text, fnClick, infoBtn, errorB
   return (
     <>
       <ButtonBoxStyled onClick={fnBtnClick}>
-          <ButtonBackgroundStyled infoBtn={infoBtn} errorBtn={errorBtn}>
+          <ButtonBackgroundStyled infoBtn={infoBtn} errorBtn={errorBtn} successBtn={successBtn}>
             <span>{text.toUpperCase()}</span>
           </ButtonBackgroundStyled>
       </ButtonBoxStyled>
-      { visibleAlert && <Alert info={text} /> }
+      { visibleAlert && ( 
+        <Alert 
+          info={text} 
+          warning={infoBtn} 
+          error={errorBtn} 
+          success={successBtn} 
+          /> 
+        )
+      }
     </>
   )
 }

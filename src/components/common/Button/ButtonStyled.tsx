@@ -3,6 +3,7 @@ import styled from "styled-components";
 interface ButtonBackgroundStyledProps {
   infoBtn?: boolean;
   errorBtn?: boolean;
+  successBtn?: boolean
 }
 
 const ButtonBoxStyled = styled.div`
@@ -23,6 +24,9 @@ const ButtonBackgroundStyled = styled.div<ButtonBackgroundStyledProps>`
   ${({ errorBtn }) => errorBtn && `
    color: rgba(255, 0, 0, 0.8);
   `}  
+  ${({ successBtn }) => successBtn && `
+  color: rgba(0, 255, 0, 0.8);
+ `}  
   transition: all 0.5s;
   position: relative;
   border-radius: var(--button-border-radius-size);
@@ -42,6 +46,9 @@ const ButtonBackgroundStyled = styled.div<ButtonBackgroundStyledProps>`
     ${({ errorBtn }) => errorBtn && `
       background-color: rgba(255,0,0,0.1);
     `}
+    ${({ successBtn }) => successBtn && `
+    background-color: rgba(0,255,0,0.1);
+  `}
     border-radius: var(--button-border-radius-size);
   }
   &:hover::before {
@@ -67,6 +74,9 @@ const ButtonBackgroundStyled = styled.div<ButtonBackgroundStyledProps>`
     ${({ errorBtn }) => errorBtn && `
       border: 1px solid rgba(209,0,0,0.8);
     `}
+    ${({ successBtn }) => successBtn && `
+    border: 1px solid rgba(0,209,0,0.8);
+  `}
   }
   &:hover::after {
     opacity: 1;

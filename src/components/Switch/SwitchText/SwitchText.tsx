@@ -1,6 +1,6 @@
-import SwitchTextStyled from './SwitchTextStyled';
 import { FunctionComponent } from 'react';
 import * as translate from '../../../data/translate.json';
+import './SwitchTextStyle.css';
 
 type SwitchTextProps = {
   visible: boolean
@@ -8,10 +8,11 @@ type SwitchTextProps = {
 
 const SwitchText:FunctionComponent<SwitchTextProps> = ({ visible }) => {
   const { linker, duplikator } = translate;
+  const headerText = visible ? linker : duplikator
   return (
-    <SwitchTextStyled isVisible={visible}>
-      { visible ? linker : duplikator }
-    </SwitchTextStyled>
+    <h2 data-text={headerText} className={headerText}>
+      {headerText}
+    </h2>
   )
 };
 

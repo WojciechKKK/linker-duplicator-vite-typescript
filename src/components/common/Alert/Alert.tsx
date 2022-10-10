@@ -1,14 +1,24 @@
 import { FunctionComponent, useState } from 'react';
 import AlertStyled from './AlertStyled';
 import * as translations from '../../../data//translate.json';
+import Button from '../Button/Button';
+import {ButtonBackgroundStyled} from '../Button/ButtonStyled';
 
 interface AlertProps {
-  info: string
+  info: string,
+  warning?: boolean,
+  error?: boolean,
+  success?: boolean
 }
 
-const Alert: FunctionComponent<AlertProps> = ({ info }) => {
+const Alert: FunctionComponent<AlertProps> = ({ info, warning, error, success }) => {
   const { start, copy, reset } = translations.buttons;
   const { startAlert, copyAlert, resetAlert } = translations.alerts;
+
+  const alertProps = { 
+    success: info == reset || info == copy,
+    error: info === start
+  }
 
   const setAlertInfo = (text: string) => {
     switch(text) {
@@ -28,7 +38,7 @@ const Alert: FunctionComponent<AlertProps> = ({ info }) => {
   }
 
   return (
-    <AlertStyled>
+    <AlertStyled {...alertProps}>
       {setAlertInfo(info)} 
     </AlertStyled>
   )

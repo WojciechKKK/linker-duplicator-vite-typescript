@@ -11,8 +11,6 @@ const DuplicatorStyled = styled.div`
 
   @media screen and (min-width: 768px){
     flex-direction: row;  
-    gap:10px
-    }
   }
 `
 const SectionStyled = styled.div`

@@ -11,7 +11,10 @@ export const useAlert = (): UseAlert => {
   const [visibleAlert, setVisibleAlert] = useState(false)
   
   const openAlert = () => {
-    setVisibleAlert(true);
+    if(!visibleAlert){
+      setVisibleAlert(true);
+
+    }
     return setTimeout(() => {
       setVisibleAlert(false);
     }, TIME_TO_VISIBLE_ALERT)

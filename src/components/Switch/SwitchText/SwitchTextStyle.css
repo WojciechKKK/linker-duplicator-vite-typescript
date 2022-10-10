@@ -1,0 +1,50 @@
+h2 {
+  position: relative;
+  color: #142747
+}
+
+.Linker::before, .Duplikator::before {
+  content: attr(data-text);
+  color: #fff;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #fff;
+
+  filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 20px #fff);
+}
+
+.Linker::before {
+  animation: animate 1s linear 1;
+  animation-fill-mode: forwards;
+}
+.Duplikator::before {
+  animation: animate1 2s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  99% {
+    border-right: 4px solid #fff;
+  }
+  100% {
+    width: 100%;
+    border-right: none
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    width: 0;
+  }
+  99% {
+    border-right: 4px solid #fff;
+  }
+  100% {
+    width: 100%;
+    border-right: none
+  }
+}

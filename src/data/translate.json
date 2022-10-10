@@ -1,7 +1,7 @@
 {
   "linker": "Linker",
   "duplikator": "Duplikator",
-  "inputPlaceholder": "Tutaj WKLEJ tekst - użyj przecinka jako separator",
+  "inputPlaceholder": "Tutaj WKLEJ tekst - użyj przecinka jako separatora",
   "inputPlaceholdertWithoutDuplicates": "Tutaj pojawi się tekst bez duplikatów",
   "linkerInputPlaceholder": "Link",
   "linkerOutputPlaceholder": "Rezultat",
@@ -20,7 +20,7 @@
   "alerts": {
     "startAlert": "Uzupełnij tekst!",
     "copyAlert": "Skopiowano do schowka",
-    "resetAlert": "Reset danych"
+    "resetAlert": "Dane zostały usunięte"
   },
   "noDuplicates": "Brak duplikatów",
   "duplicatesHeader": "Lista duplikatów"

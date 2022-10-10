@@ -7,7 +7,7 @@ const LinkerStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  gap:10px
+  gap: 10px;
 `
 const SectionStyled = styled.div`
   text-align: center;
