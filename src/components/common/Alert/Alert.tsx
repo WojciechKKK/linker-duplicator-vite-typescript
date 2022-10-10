@@ -17,7 +17,7 @@ const Alert: FunctionComponent<AlertProps> = ({ info, warning, error, success })
 
   const alertProps = { 
     success: info == reset || info == copy,
-    error: info === start
+    warning: info === start
   }
 
   const setAlertInfo = (text: string) => {
