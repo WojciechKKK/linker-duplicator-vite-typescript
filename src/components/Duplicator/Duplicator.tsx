@@ -1,16 +1,21 @@
 import { DuplicatorStyled, SectionStyled}  from './DuplicatorStyled';
 import SectionButtons from '../common/SectionButtons/SectionButtons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as translate from '../../data/translate.json';
 import { ThemeType, TextAreaField } from '../common/TextAreaField/TextAreaField';
 import { useRemoveDuplicate } from '../../utils/useRemoveDuplicate';
 import Details from '../common/Details/Details';
 
 const Duplicator = () => {
+  const { duplikator } = translate;
   const { inputPlaceholder, inputPlaceholdertWithoutDuplicates } = translate;
   const [ valueFromUser, setValueFromUser] = useState('');
   const { fnRemoveDuplicate, resultValues, duplicates, reset } = useRemoveDuplicate(valueFromUser)
 
+  useEffect(() => {
+    document.title = duplikator
+  },[])
+  
   const resetData = () => {
     setValueFromUser("")
     reset()
